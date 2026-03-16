@@ -9,38 +9,40 @@ import GalleryCard from '../components/GalleryCard';
 import NoticeCard from '../components/NoticeCard';
 import TestimonialCard from '../components/TestimonialCard';
 import ContactForm from '../components/ContactForm';
+import DynamicIcon from '../components/DynamicIcon';
+
 
 export default function Home() {
   return (
     <div>
       <section className="relative bg-gradient-to-br from-orange-100 via-pink-100 to-teal-100 min-h-screen flex items-center overflow-hidden">
         <motion.div
-          className="absolute top-20 left-10 text-6xl"
+          className="absolute top-20 left-10 text-orange-400"
           animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
           transition={{ duration: 3, repeat: Infinity }}
         >
-          ⭐
+          <DynamicIcon name="Star" size={48} />
         </motion.div>
         <motion.div
-          className="absolute top-40 right-20 text-5xl"
+          className="absolute top-40 right-20 text-teal-400"
           animate={{ y: [0, 20, 0], rotate: [0, -10, 0] }}
           transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
         >
-          🚀
+          <DynamicIcon name="Rocket" size={40} />
         </motion.div>
         <motion.div
-          className="absolute bottom-20 left-20 text-5xl"
+          className="absolute bottom-20 left-20 text-orange-400"
           animate={{ y: [0, -15, 0], rotate: [0, 15, 0] }}
           transition={{ duration: 3.5, repeat: Infinity, delay: 1 }}
         >
-          📚
+          <DynamicIcon name="BookOpen" size={40} />
         </motion.div>
         <motion.div
-          className="absolute bottom-40 right-10 text-6xl"
+          className="absolute bottom-40 right-10 text-teal-400"
           animate={{ y: [0, 15, 0], x: [0, 10, 0] }}
           transition={{ duration: 4, repeat: Infinity, delay: 1.5 }}
         >
-          ☁️
+          <DynamicIcon name="Cloud" size={48} />
         </motion.div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
@@ -104,9 +106,9 @@ export default function Home() {
                 <motion.div
                   animate={{ rotate: [0, 5, -5, 0] }}
                   transition={{ duration: 4, repeat: Infinity }}
-                  className="text-9xl"
+                  className="text-white"
                 >
-                  🎨
+                  <DynamicIcon name="Palette" size={120} strokeWidth={1} />
                 </motion.div>
               </div>
               <motion.div
@@ -182,9 +184,9 @@ export default function Home() {
                 <motion.div
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 3, repeat: Infinity }}
-                  className="text-9xl"
+                  className="text-white"
                 >
-                  🏫
+                  <DynamicIcon name="School" size={120} strokeWidth={1} />
                 </motion.div>
               </div>
             </motion.div>
@@ -210,7 +212,9 @@ export default function Home() {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-center space-x-3"
                   >
-                    <span className="text-2xl">✅</span>
+                    <div className="text-orange-500">
+                      <DynamicIcon name="CheckCircle2" size={24} />
+                    </div>
                     <span className="text-gray-700">{point}</span>
                   </motion.li>
                 ))}
@@ -498,8 +502,8 @@ export default function Home() {
 
               <div className="bg-white rounded-3xl p-8 shadow-xl">
                 <h3 className="text-2xl font-bold text-gray-800 mb-6">Visit Us</h3>
-                <div className="bg-gradient-to-br from-teal-300 to-orange-300 rounded-2xl h-64 flex items-center justify-center">
-                  <span className="text-6xl">🗺️</span>
+                <div className="bg-gradient-to-br from-teal-300 to-orange-300 rounded-2xl h-64 flex items-center justify-center text-white">
+                  <DynamicIcon name="Map" size={80} strokeWidth={1} />
                 </div>
                 <p className="text-sm text-gray-500 mt-4 text-center">
                   Google Maps placeholder - Schedule a visit today!

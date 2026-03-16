@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Mail } from 'lucide-react';
+import DynamicIcon from './DynamicIcon';
 
 interface TeacherCardProps {
   name: string;
@@ -20,8 +21,8 @@ export default function TeacherCard({ name, designation, qualification, image, s
       whileHover={{ y: -10 }}
       className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
     >
-      <div className="bg-gradient-to-br from-teal-400 to-teal-500 h-48 flex items-center justify-center">
-        <span className="text-8xl">{image}</span>
+      <div className="bg-gradient-to-br from-teal-400 to-teal-500 h-48 flex items-center justify-center text-white">
+        <DynamicIcon name={image} size={80} strokeWidth={1.5} />
       </div>
 
       <div className="p-6">

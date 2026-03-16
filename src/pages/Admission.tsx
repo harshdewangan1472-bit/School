@@ -3,6 +3,7 @@ import { CheckCircle, FileText, Calendar, Users, Award } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import ContactForm from '../components/ContactForm';
 import { siteData } from '../data/siteData';
+import DynamicIcon from '../components/DynamicIcon';
 
 export default function Admission() {
   return (
@@ -10,7 +11,7 @@ export default function Admission() {
       <PageHeader
         title="Admission Information"
         subtitle="Join our family and give your child the best start"
-        icon="📝"
+        icon="ClipboardEdit"
       />
 
       <section className="py-20 bg-white">
@@ -151,8 +152,12 @@ export default function Admission() {
                 whileHover={{ y: -10, scale: 1.02 }}
                 className="bg-gradient-to-br from-orange-100 to-teal-100 rounded-3xl p-8 shadow-xl text-center"
               >
-                <div className="text-5xl mb-4">
-                  {index === 0 ? '🌱' : index === 1 ? '📚' : index === 2 ? '✏️' : '🎓'}
+                <div className="mb-4 text-orange-500 flex justify-center">
+                  <DynamicIcon 
+                    name={index === 0 ? 'Sprout' : index === 1 ? 'BookOpen' : index === 2 ? 'Pencil' : 'GraduationCap'} 
+                    size={48} 
+                    strokeWidth={2.5}
+                  />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-4">{fee.class}</h3>
                 <div className="space-y-3">

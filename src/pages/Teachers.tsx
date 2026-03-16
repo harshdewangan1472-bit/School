@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import PageHeader from '../components/PageHeader';
 import TeacherCard from '../components/TeacherCard';
 import { siteData } from '../data/siteData';
+import DynamicIcon from '../components/DynamicIcon';
 
 export default function Teachers() {
   return (
@@ -9,7 +10,7 @@ export default function Teachers() {
       <PageHeader
         title="Our Teachers"
         subtitle="Meet our passionate and experienced educators"
-        icon="👩‍🏫"
+        icon="Users"
       />
 
       <section className="py-20 bg-white">
@@ -59,17 +60,17 @@ export default function Teachers() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                icon: '🎓',
+                icon: 'GraduationCap',
                 title: 'Professional Development',
                 description: 'Regular training and skill enhancement programs',
               },
               {
-                icon: '💼',
+                icon: 'Briefcase',
                 title: 'Competitive Benefits',
                 description: 'Attractive salary and benefits package',
               },
               {
-                icon: '🤝',
+                icon: 'Users',
                 title: 'Supportive Environment',
                 description: 'Collaborative and nurturing work culture',
               },
@@ -81,9 +82,11 @@ export default function Teachers() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all text-center"
+                className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all text-center flex flex-col items-center"
               >
-                <div className="text-6xl mb-4">{benefit.icon}</div>
+                <div className="mb-4 text-orange-500">
+                  <DynamicIcon name={benefit.icon} size={48} strokeWidth={2} />
+                </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </motion.div>

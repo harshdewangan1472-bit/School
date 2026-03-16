@@ -2,7 +2,7 @@ export const siteData = {
   school: {
     name: "Little Stars Academy",
     tagline: "Nurturing Bright Minds for a Brighter Tomorrow",
-    logo: "🌟",
+    logo: "Star",
     established: "2010",
     phone: "+91 9876543210",
     email: "info@littlestars.edu",
@@ -19,25 +19,25 @@ export const siteData = {
   features: [
     {
       id: 1,
-      icon: "💻",
+      icon: "Monitor",
       title: "Digital Learning Tools",
       description: "Interactive smart boards and digital resources for modern education"
     },
     {
       id: 2,
-      icon: "🚀",
+      icon: "Rocket",
       title: "Innovation in Learning",
       description: "Creative teaching methods that spark curiosity and imagination"
     },
     {
       id: 3,
-      icon: "🏫",
+      icon: "School",
       title: "Safe & Smart Campus",
       description: "CCTV monitored, secure environment with modern facilities"
     },
     {
       id: 4,
-      icon: "🎨",
+      icon: "Palette",
       title: "Activity Based Learning",
       description: "Hands-on activities that make learning fun and engaging"
     }
@@ -60,7 +60,7 @@ export const siteData = {
       name: "Nursery",
       ageGroup: "2.5 - 3.5 years",
       description: "Gentle introduction to school environment with play-based learning",
-      icon: "🌱",
+      icon: "Sprout",
       color: "from-pink-400 to-pink-300"
     },
     {
@@ -68,7 +68,7 @@ export const siteData = {
       name: "LKG",
       ageGroup: "3.5 - 4.5 years",
       description: "Foundation building through stories, rhymes, and creative activities",
-      icon: "📚",
+      icon: "BookOpen",
       color: "from-blue-400 to-blue-300"
     },
     {
@@ -76,7 +76,7 @@ export const siteData = {
       name: "UKG",
       ageGroup: "4.5 - 5.5 years",
       description: "Preparing for primary school with basic reading and writing skills",
-      icon: "✏️",
+      icon: "Pencil",
       color: "from-green-400 to-green-300"
     },
     {
@@ -84,7 +84,7 @@ export const siteData = {
       name: "Primary",
       ageGroup: "5.5+ years",
       description: "Comprehensive curriculum focusing on academics and character building",
-      icon: "🎓",
+      icon: "GraduationCap",
       color: "from-orange-400 to-orange-300"
     }
   ],
@@ -95,7 +95,7 @@ export const siteData = {
       name: "Mrs. Sarah Johnson",
       designation: "Principal",
       qualification: "M.Ed, 20 years experience",
-      image: "👩‍🏫",
+      image: "UserRound",
       specialization: "Educational Leadership"
     },
     {
@@ -103,7 +103,7 @@ export const siteData = {
       name: "Miss Emily Davis",
       designation: "Nursery Teacher",
       qualification: "B.Ed in Early Childhood",
-      image: "👩‍🎓",
+      image: "UserRound",
       specialization: "Early Childhood Education"
     },
     {
@@ -111,7 +111,7 @@ export const siteData = {
       name: "Mrs. Rachel Williams",
       designation: "LKG Teacher",
       qualification: "M.Ed, 10 years experience",
-      image: "👩‍💼",
+      image: "UserRound",
       specialization: "Montessori Method"
     },
     {
@@ -119,7 +119,7 @@ export const siteData = {
       name: "Miss Jennifer Brown",
       designation: "UKG Teacher",
       qualification: "B.Ed, 8 years experience",
-      image: "👩‍🏫",
+      image: "UserRound",
       specialization: "Activity Based Learning"
     }
   ],
@@ -219,10 +219,10 @@ export const siteData = {
   ],
 
   socialMedia: [
-    { name: "Facebook", icon: "facebook", url: "#" },
-    { name: "Instagram", icon: "instagram", url: "#" },
-    { name: "Twitter", icon: "twitter", url: "#" },
-    { name: "YouTube", icon: "youtube", url: "#" }
+    { name: "Facebook", icon: "Facebook", url: "#" },
+    { name: "Instagram", icon: "Instagram", url: "#" },
+    { name: "Twitter", icon: "Twitter", url: "#" },
+    { name: "YouTube", icon: "Youtube", url: "#" }
   ],
 
   quickLinks: [

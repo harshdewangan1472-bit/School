@@ -9,7 +9,7 @@ export default function Videos() {
       <PageHeader
         title="Video Gallery"
         subtitle="Watch our school in action through these videos"
-        icon="🎥"
+        icon="Video"
       />
 
       <section className="py-20 bg-white">

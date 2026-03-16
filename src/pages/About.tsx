@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import PageHeader from '../components/PageHeader';
 import { siteData } from '../data/siteData';
+import DynamicIcon from '../components/DynamicIcon';
 
 export default function About() {
   return (
@@ -8,7 +9,7 @@ export default function About() {
       <PageHeader
         title="About Us"
         subtitle="Learn more about our mission, vision, and values"
-        icon="🏫"
+        icon="School"
       />
 
       <section className="py-20 bg-white">
@@ -35,7 +36,9 @@ export default function About() {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-center space-x-3"
                   >
-                    <span className="text-2xl">✅</span>
+                    <div className="text-orange-500">
+                      <DynamicIcon name="CheckCircle2" size={24} />
+                    </div>
                     <span className="text-gray-700 text-lg">{point}</span>
                   </motion.li>
                 ))}
@@ -52,9 +55,9 @@ export default function About() {
                 <motion.div
                   animate={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 3, repeat: Infinity }}
-                  className="text-9xl"
+                  className="text-white"
                 >
-                  🎓
+                  <DynamicIcon name="GraduationCap" size={120} strokeWidth={1} />
                 </motion.div>
               </div>
             </motion.div>
@@ -81,8 +84,8 @@ export default function About() {
               className="lg:col-span-1"
             >
               <div className="bg-white rounded-3xl p-8 shadow-xl text-center sticky top-24">
-                <div className="bg-gradient-to-br from-teal-400 to-orange-400 w-48 h-48 rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
-                  <span className="text-8xl">👩‍🏫</span>
+                <div className="bg-gradient-to-br from-teal-400 to-orange-400 w-48 h-48 rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg text-white">
+                  <DynamicIcon name="UserCircle2" size={80} strokeWidth={1.5} />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">
                   {siteData.principalMessage.name}
@@ -129,12 +132,12 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: '💝', title: 'Care & Compassion', description: 'Every child is treated with love and respect' },
-              { icon: '🎯', title: 'Excellence', description: 'Striving for the highest standards in education' },
-              { icon: '🤝', title: 'Collaboration', description: 'Working together with parents and community' },
-              { icon: '🌱', title: 'Growth Mindset', description: 'Encouraging continuous learning and development' },
-              { icon: '🎨', title: 'Creativity', description: 'Fostering imagination and innovative thinking' },
-              { icon: '🌟', title: 'Integrity', description: 'Building character and strong moral values' },
+              { icon: 'Heart', title: 'Care & Compassion', description: 'Every child is treated with love and respect' },
+              { icon: 'Target', title: 'Excellence', description: 'Striving for the highest standards in education' },
+              { icon: 'Users', title: 'Collaboration', description: 'Working together with parents and community' },
+              { icon: 'Sprout', title: 'Growth Mindset', description: 'Encouraging continuous learning and development' },
+              { icon: 'Palette', title: 'Creativity', description: 'Fostering imagination and innovative thinking' },
+              { icon: 'Star', title: 'Integrity', description: 'Building character and strong moral values' },
             ].map((value, index) => (
               <motion.div
                 key={index}
@@ -145,7 +148,9 @@ export default function About() {
                 whileHover={{ y: -10 }}
                 className="bg-gradient-to-br from-orange-100 to-teal-100 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all"
               >
-                <div className="text-6xl mb-4">{value.icon}</div>
+                <div className="mb-4 flex justify-center text-orange-500">
+                  <DynamicIcon name={value.icon} size={48} strokeWidth={2} />
+                </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-3">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
               </motion.div>
@@ -170,14 +175,14 @@ export default function About() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { icon: '🏫', title: 'Smart Classrooms', color: 'from-pink-400 to-rose-400' },
-              { icon: '📚', title: 'Library', color: 'from-blue-400 to-cyan-400' },
-              { icon: '🎮', title: 'Play Area', color: 'from-green-400 to-emerald-400' },
-              { icon: '🔬', title: 'Science Lab', color: 'from-purple-400 to-pink-400' },
-              { icon: '🎨', title: 'Art Studio', color: 'from-yellow-400 to-orange-400' },
-              { icon: '🎵', title: 'Music Room', color: 'from-teal-400 to-cyan-400' },
-              { icon: '⚽', title: 'Sports Ground', color: 'from-orange-400 to-red-400' },
-              { icon: '🩺', title: 'Medical Room', color: 'from-green-400 to-teal-400' },
+              { icon: 'School', title: 'Smart Classrooms', color: 'from-pink-400 to-rose-400' },
+              { icon: 'Book', title: 'Library', color: 'from-blue-400 to-cyan-400' },
+              { icon: 'Gamepad2', title: 'Play Area', color: 'from-green-400 to-emerald-400' },
+              { icon: 'FlaskConical', title: 'Science Lab', color: 'from-purple-400 to-pink-400' },
+              { icon: 'Palette', title: 'Art Studio', color: 'from-yellow-400 to-orange-400' },
+              { icon: 'Music', title: 'Music Room', color: 'from-teal-400 to-cyan-400' },
+              { icon: 'Trophy', title: 'Sports Ground', color: 'from-orange-400 to-red-400' },
+              { icon: 'Stethoscope', title: 'Medical Room', color: 'from-green-400 to-teal-400' },
             ].map((facility, index) => (
               <motion.div
                 key={index}
@@ -186,9 +191,11 @@ export default function About() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, rotate: 5 }}
-                className={`bg-gradient-to-br ${facility.color} rounded-3xl p-8 text-white text-center shadow-xl`}
+                className={`bg-gradient-to-br ${facility.color} rounded-3xl p-8 text-white text-center shadow-xl flex flex-col items-center`}
               >
-                <div className="text-6xl mb-4">{facility.icon}</div>
+                <div className="mb-4">
+                  <DynamicIcon name={facility.icon} size={48} strokeWidth={2} />
+                </div>
                 <h3 className="text-xl font-bold">{facility.title}</h3>
               </motion.div>
             ))}

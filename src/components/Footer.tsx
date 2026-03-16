@@ -1,22 +1,9 @@
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { siteData } from '../data/siteData';
+import DynamicIcon from './DynamicIcon';
 
 export default function Footer() {
-  const getSocialIcon = (iconName: string) => {
-    switch (iconName) {
-      case 'facebook':
-        return <Facebook size={20} />;
-      case 'instagram':
-        return <Instagram size={20} />;
-      case 'twitter':
-        return <Twitter size={20} />;
-      case 'youtube':
-        return <Youtube size={20} />;
-      default:
-        return null;
-    }
-  };
 
   return (
     <footer className="bg-gradient-to-br from-orange-500 to-teal-500 text-white">
@@ -24,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <span className="text-4xl">{siteData.school.logo}</span>
+              <DynamicIcon name={siteData.school.logo} size={40} strokeWidth={2.5} />
               <div>
                 <h3 className="text-xl font-bold">{siteData.school.name}</h3>
                 <p className="text-sm text-white/80">Est. {siteData.school.established}</p>
@@ -79,7 +66,7 @@ export default function Footer() {
                   className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-all hover:scale-110"
                   aria-label={social.name}
                 >
-                  {getSocialIcon(social.icon)}
+                  <DynamicIcon name={social.icon} size={20} />
                 </a>
               ))}
             </div>

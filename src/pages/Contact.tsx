@@ -3,6 +3,7 @@ import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import PageHeader from '../components/PageHeader';
 import ContactForm from '../components/ContactForm';
 import { siteData } from '../data/siteData';
+import DynamicIcon from '../components/DynamicIcon';
 
 export default function Contact() {
   return (
@@ -10,7 +11,7 @@ export default function Contact() {
       <PageHeader
         title="Contact Us"
         subtitle="Get in touch with us for any queries or information"
-        icon="📞"
+        icon="PhoneCall"
       />
 
       <section className="py-20 bg-white">
@@ -136,9 +137,11 @@ export default function Contact() {
             viewport={{ once: true }}
             className="bg-white rounded-3xl overflow-hidden shadow-2xl"
           >
-            <div className="bg-gradient-to-br from-teal-300 to-orange-300 h-96 flex items-center justify-center">
+            <div className="bg-gradient-to-br from-teal-300 to-orange-300 h-96 flex items-center justify-center text-white">
               <div className="text-center">
-                <span className="text-8xl mb-4 block">🗺️</span>
+                <div className="mb-4 flex justify-center">
+                  <DynamicIcon name="Map" size={80} strokeWidth={1} />
+                </div>
                 <p className="text-white text-xl font-semibold">Google Maps Integration</p>
                 <p className="text-white/80 mt-2">Interactive map would be displayed here</p>
               </div>

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import DynamicIcon from './DynamicIcon';
 
 interface PageHeaderProps {
   title: string;
@@ -37,9 +38,9 @@ export default function PageHeader({ title, subtitle, icon }: PageHeaderProps) {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.3, type: 'spring', stiffness: 200 }}
-              className="text-7xl mb-4"
+              className="mb-4 flex justify-center text-white"
             >
-              {icon}
+              <DynamicIcon name={icon} size={80} strokeWidth={1.5} />
             </motion.div>
           )}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import DynamicIcon from './DynamicIcon';
 
 interface FeatureCardProps {
   icon: string;
@@ -17,13 +18,13 @@ export default function FeatureCard({ icon, title, description, index }: Feature
       whileHover={{ y: -10, transition: { duration: 0.3 } }}
       className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300"
     >
-      <div className="text-6xl mb-4 flex justify-center">
-        <motion.span
+      <div className="mb-4 flex justify-center text-orange-500">
+        <motion.div
           animate={{ rotate: [0, 10, -10, 0] }}
           transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
         >
-          {icon}
-        </motion.span>
+          <DynamicIcon name={icon} size={48} strokeWidth={2.5} />
+        </motion.div>
       </div>
       <h3 className="text-xl font-bold text-gray-800 mb-3 text-center">{title}</h3>
       <p className="text-gray-600 text-center leading-relaxed">{description}</p>

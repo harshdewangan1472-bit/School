@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import DynamicIcon from './DynamicIcon';
 
 interface GalleryCardProps {
   title: string;
@@ -18,8 +19,10 @@ export default function GalleryCard({ title, category, bgColor, index }: Gallery
       className="group cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
     >
       <div className={`${bgColor} h-64 relative overflow-hidden flex items-center justify-center`}>
-        <div className="text-white text-center p-6 relative z-10">
-          <div className="text-6xl mb-4">📸</div>
+        <div className="text-white text-center p-6 relative z-10 flex flex-col items-center">
+          <div className="mb-4">
+            <DynamicIcon name="Image" size={60} strokeWidth={1} />
+          </div>
           <span className="text-xs bg-white/20 px-3 py-1 rounded-full backdrop-blur-sm">
             {category}
           </span>

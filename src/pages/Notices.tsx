@@ -9,7 +9,7 @@ export default function Notices() {
       <PageHeader
         title="Notice Board"
         subtitle="Stay updated with our latest announcements and events"
-        icon="📋"
+        icon="BellRing"
       />
 
       <section className="py-20 bg-white">

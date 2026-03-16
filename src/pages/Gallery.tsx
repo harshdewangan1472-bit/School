@@ -9,7 +9,7 @@ export default function Gallery() {
       <PageHeader
         title="Photo Gallery"
         subtitle="Capturing memorable moments and joyful experiences"
-        icon="📸"
+        icon="Image"
       />
 
       <section className="py-20 bg-white">

@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { siteData } from '../data/siteData';
+import DynamicIcon from './DynamicIcon';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,8 +26,8 @@ export default function Navbar() {
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link to="/" className="flex items-center space-x-3">
-            <span className="text-4xl">{siteData.school.logo}</span>
+          <Link to="/" className="flex items-center space-x-3 text-orange-500">
+            <DynamicIcon name={siteData.school.logo} size={40} strokeWidth={2.5} />
             <div>
               <h1 className="text-2xl font-bold text-orange-500">{siteData.school.name}</h1>
               <p className="text-xs text-gray-600 hidden sm:block">{siteData.school.tagline}</p>

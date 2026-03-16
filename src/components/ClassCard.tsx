@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import DynamicIcon from './DynamicIcon';
 
 interface ClassCardProps {
   name: string;
@@ -20,15 +21,17 @@ export default function ClassCard({ name, ageGroup, description, icon, color, in
       className={`bg-gradient-to-br ${color} rounded-3xl p-8 shadow-xl text-white relative overflow-hidden group`}
     >
       <motion.div
-        className="absolute -right-8 -top-8 text-9xl opacity-20"
+        className="absolute -right-8 -top-8 opacity-20"
         animate={{ rotate: 360 }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
       >
-        {icon}
+        <DynamicIcon name={icon} size={150} />
       </motion.div>
 
       <div className="relative z-10">
-        <div className="text-5xl mb-4">{icon}</div>
+        <div className="mb-4">
+          <DynamicIcon name={icon} size={48} strokeWidth={2.5} />
+        </div>
         <h3 className="text-2xl font-bold mb-2">{name}</h3>
         <p className="text-white/90 font-medium mb-3">{ageGroup}</p>
         <p className="text-white/80 leading-relaxed">{description}</p>
